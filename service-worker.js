@@ -7,8 +7,8 @@ const urlsToCache = [
 ];
 
 // Evento de instalación: ocurre la primera vez que el Service Worker se registra
-self.addEventListener('install', e => {
-    e.waitUntil(
+self.addEventListener('install', event => {
+    event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
                 console.log('Abriendo caché')
